@@ -1,0 +1,6 @@
+if SHIELD_ANSI50
+
+config ZMK_KEYBOARD_NAME
+    default "ansi50"
+
+endif
