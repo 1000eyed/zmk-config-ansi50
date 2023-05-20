@@ -41,5 +41,7 @@
     &kp TAB      &kp A      &kp S      &kp D       &kp F       &kp G       &kp H       &kp J      &kp K       &kp L       &kp SEMI    &kp APOS      &kp ENTER     &kp INS
     &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B       &kp N       &kp M      &kp COMMA   &kp DOT     &kp SLASH   &kp RSHFT     &kp UP        &kp BSLH
     &kp LCTRL    &kp LGUI   &kp LALT   &kp SPACE   &none       &none       &kp RALT    &kp RGUI   &kp RCTRL   &kp LEFT    &kp DOWN    &kp RIGHT
+            >;
+        };
     };
 };
