@@ -3,7 +3,9 @@
 #include <dt-bindings/zmk/bt.h>
 
 #define DEFAULT 0
-#define LOWER 1
+#define BT 1
+#define NUM 2
+#define FUNC 3
 
 / {
     keymap {
@@ -11,19 +13,33 @@
 
         DEFAULT {
             bindings = <
-    &kp ESC   &kp Q     &kp W    &kp E     &kp R     &kp T     &kp Y     &kp U    &kp I     &kp O     &kp P     &kp LBKT  &kp RBKT  &kp BSPC  &kp DEL
-    &kp TAB   &kp A     &kp S    &kp D     &kp F     &kp G     &kp H     &kp J    &kp K     &kp L     &kp SEMI  &kp APOS  &kp ENTER &kp INS
-    &kp LSHFT &kp Z     &kp X    &kp C     &kp V     &kp B     &kp N     &kp M    &kp COMMA &kp DOT   &kp SLASH &kp RSHFT &kp UP    &kp BSLH
-    &kp LCTRL &kp LGUI  &kp LALT &kp SPACE &mo LOWER &mo LOWER &kp RALT  &kp RGUI &kp RCTRL &kp LEFT  &kp DOWN  &kp RIGHT
+    &lt BT ESC   &kp Q     &kp W    &kp E     &kp R     &kp T     &kp Y     &kp U    &kp I     &kp O     &kp P     &kp LBKT  &kp RBKT  &kp BSPC  &kp DEL
+    &kp TAB      &kp A     &kp S    &kp D     &kp F     &kp G     &kp H     &kp J    &kp K     &kp L     &kp SEMI  &kp APOS  &kp ENTER &kp INS
+    &kp LSHFT    &kp Z     &kp X    &kp C     &kp V     &kp B     &kp N     &kp M    &kp COMMA &kp DOT   &kp SLASH &kp RSHFT &kp UP    &kp BSLH
+    &kp LCTRL    &kp LGUI  &kp LALT &kp SPACE &mo NUM   &mo FUNC  &kp RALT  &kp RGUI &kp RCTRL &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
-        LOWER {
+        BT {
             bindings = <
-    &kp ESC     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp R     &kp T     &kp Y     &kp U    &kp I     &kp O     &kp P     &kp LBKT  &kp RBKT  &bt BT_CLR &bootloader
-    &kp TAB     &kp A        &kp S        &kp D        &kp F     &kp G     &kp H     &kp J    &kp K     &kp L     &kp SEMI  &kp APOS  &kp ENTER &kp INS
-    &kp LSHFT   &kp Z        &kp X        &kp C        &kp V     &kp B     &kp N     &kp M    &kp COMMA &kp DOT   &kp SLASH &kp RSHFT &kp UP    &kp BSLH
-    &kp LCTRL   &kp LGUI     &kp LALT     &kp SPACE    &none     &none     &kp RALT  &kp RGUI &kp RCTRL &kp LEFT  &kp DOWN  &kp RIGHT
+    &none       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp T     &kp Y     &kp U    &kp I     &kp O     &kp P     &kp LBKT  &kp RBKT  &bt BT_CLR &bootloader
+    &kp TAB     &kp A        &kp S        &kp D        &kp F        &kp G     &kp H     &kp J    &kp K     &kp L     &kp SEMI  &kp APOS  &kp ENTER &kp INS
+    &kp LSHFT   &kp Z        &kp X        &kp C        &kp V        &kp B     &kp N     &kp M    &kp COMMA &kp DOT   &kp SLASH &kp RSHFT &kp UP    &kp BSLH
+    &kp LCTRL   &kp LGUI     &kp LALT     &kp SPACE    &none        &none     &kp RALT  &kp RGUI &kp RCTRL &kp LEFT  &kp DOWN  &kp RIGHT
             >;
         };
+        NUM {
+            bindings = <
+    &kp ESC   &kp N1     &kp N2     &kp N3      &kp N4      &kp N5      &kp N6      &kp N7     &kp N8      &kp N9      &kp N0      &kp MINUS     &kp EQUAL     &kp BSPC  &kp DEL
+    &kp TAB   &kp LS(N1) &kp LS(N2) &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7) &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(MINUS) &kp LS(EQUAL) &kp INS
+    &kp LSHFT &kp Z      &kp X      &kp C       &kp V       &kp B       &kp N       &kp M      &kp COMMA   &kp DOT     &kp SLASH   &kp RSHFT     &kp UP        &kp BSLH
+    &kp LCTRL &kp LGUI   &kp LALT   &kp SPACE   &none       &none       &kp RALT    &kp RGUI   &kp RCTRL   &kp LEFT    &kp DOWN    &kp RIGHT
+            >;
+        };
+        FUNC {
+            bindings = <
+    &kp ESC      &kp F1     &kp F2     &kp F3      &kp F4      &kp F5      &kp F6      &kp F7     &kp F8      &kp F9      &kp F10     &kp F11       &kp F12       &kp BSPC  &kp DEL
+    &kp TAB      &kp A      &kp S      &kp D       &kp F       &kp G       &kp H       &kp J      &kp K       &kp L       &kp SEMI    &kp APOS      &kp ENTER     &kp INS
+    &kp LSHFT    &kp Z      &kp X      &kp C       &kp V       &kp B       &kp N       &kp M      &kp COMMA   &kp DOT     &kp SLASH   &kp RSHFT     &kp UP        &kp BSLH
+    &kp LCTRL    &kp LGUI   &kp LALT   &kp SPACE   &none       &none       &kp RALT    &kp RGUI   &kp RCTRL   &kp LEFT    &kp DOWN    &kp RIGHT
     };
 };
