@@ -52,10 +52,10 @@
         };
         SHORT {
             bindings = <
-    &none        &none      &LA(F4)    &none       &none       &none       &none       &none      &none       &none       &none       &none         &none       &none  &none
-    &none        &none      &none      &none       &none       &none       &none       &none      &none       &none       &none       &none         &kp ENTER   &none
-    &kp LSHFT    &none      &none      &LC(INS)    &LS(INS)    &none       &none       &none      &none       &none       &none       &kp RSHFT     &kp PG_UP   &none
-    &kp LCTRL    &kp LGUI   &kp LALT   &kp SPACE   &kp CAPS    &none       &kp RALT    &kp RGUI   &kp RCTRL   &kp HOME    &kp PG_DN   &kp END
+    &none        &none      &kp LA(F4) &none        &none        &none       &none       &none      &none       &none       &none       &none         &none       &none  &none
+    &none        &none      &none      &none        &none        &none       &none       &none      &none       &none       &none       &none         &kp ENTER   &none
+    &kp LSHFT    &none      &none      &kp LC(INS)  &kp LS(INS)  &none       &none       &none      &none       &none       &none       &kp RSHFT     &kp PG_UP   &none
+    &kp LCTRL    &kp LGUI   &kp LALT   &kp SPACE    &kp CAPS     &none       &kp RALT    &kp RGUI   &kp RCTRL   &kp HOME    &kp PG_DN   &kp END
             >;
         };
         NUMFUNC {
