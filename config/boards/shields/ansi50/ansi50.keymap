@@ -77,7 +77,18 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
+            bindings = <&kp LPAR>, <&parentheses>;
+        };
+    };
+
+    macros {
+        parentheses: parentheses {
+            label = "parentheses";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>
+                ;
         };
     };
     
