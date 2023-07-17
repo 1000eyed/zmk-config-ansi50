@@ -26,7 +26,7 @@
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT)>;
         };
         grvescbt: behavior_layer_esc_grv {
             compatible = "zmk,behavior-hold-tap";
