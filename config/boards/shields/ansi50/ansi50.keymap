@@ -35,7 +35,7 @@
           key-positions = <36 37>;
           bindings = <&kp LBKT>;
         };
-        combo_bracket_square_l {
+        combo_bracket_square_r {
           timeout-ms = <50>;
           global-quick-tap-ms = <300>;
 
