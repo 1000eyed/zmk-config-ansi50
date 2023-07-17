@@ -20,7 +20,7 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&tog>;
         };
-        grvescbt: behavior_mo_tog {
+        grvescbt: behavior_layer_esc_grv {
             compatible = "zmk,behavior-hold-tap";
             label = "grvescbt";
             #binding-cells = <2>;
