@@ -28,12 +28,12 @@
           key-positions = <23 24>;
           bindings = <&kp RPAR>;
         };
-        combo_bracket_round {
+        combo_parentheses_chevrons {
           timeout-ms = <50>;
           global-quick-tap-ms = <300>;
 
           key-positions = <22 23 24>;
-          bindings = <&parentheses>;
+          bindings = <&parentheses_chevrons>;
         };
 
         combo_bracket_square_l {
@@ -80,6 +80,13 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&gresc>;
         };
+        parentheses_chevrons: parentheses_chevrons {
+            compatible = "zmk,behavior-mod-morph";
+            label = "parentheses_chevrons";
+            #binding-cells = <0>;
+            bindings = <&parentheses>, <&chevrons>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -89,6 +96,14 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>
+                ;
+        };
+        chevrons: chevrons {
+            label = "chevrons";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LT &kp GT &kp LEFT>
                 ;
         };
     };
